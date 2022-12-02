@@ -93,13 +93,54 @@ export default function App() {
   };
 
   return (
-    <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
+    <div className="">
       <div>
-        <form className="m-4" onSubmit={handleSubmit}>
+        <Navbar
+          fluid={true}
+          rounded={true}
+        >
+          <Navbar.Brand href="https://flowbite.com/">
+            <img
+              src="https://flowbite.com/docs/images/logo.svg"
+              className="mr-3 h-6 sm:h-9"
+              alt="Flowbite Logo"
+            />
+            <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+              Flowbite
+            </span>
+          </Navbar.Brand>
+          <div className="flex md:order-2">
+            <Button>
+              Get started
+            </Button>
+            <Navbar.Toggle />
+          </div>
+          <Navbar.Collapse>
+            <Navbar.Link
+              href="/navbars"
+              active={true}
+            >
+              Home
+            </Navbar.Link>
+            <Navbar.Link href="/navbars">
+              About
+            </Navbar.Link>
+            <Navbar.Link href="/navbars">
+              Services
+            </Navbar.Link>
+            <Navbar.Link href="/navbars">
+              Pricing
+            </Navbar.Link>
+            <Navbar.Link href="/navbars">
+              Contact
+            </Navbar.Link>
+          </Navbar.Collapse>
+        </Navbar>
+        <form className="m-7" onSubmit={handleSubmit}>
           <div className="credit-card w-full lg:w-3/4 sm:w-auto shadow-lg mx-auto rounded-xl bg-white">
             <main className="mt-4 p-4">
               <h1 className="text-xl font-semibold text-gray-700 text-center">
-                Read from smart contract
+                Read from smarasdasdasd
               </h1>
               <div className="">
                 <div className="my-3">
@@ -170,7 +211,7 @@ export default function App() {
             </div>
           </div>
         </form>
-        <div className="m-4 credit-card w-full lg:w-3/4 sm:w-auto shadow-lg mx-auto rounded-xl bg-white">
+        {/* <div className="m-4 credit-card w-full lg:w-3/4 sm:w-auto shadow-lg mx-auto rounded-xl bg-white">
           <div className="mt-4 p-4">
             <h1 className="text-xl font-semibold text-gray-700 text-center">
               Write to contract
@@ -203,9 +244,9 @@ export default function App() {
               </footer>
             </form>
           </div>
-        </div>
+        </div> */}
       </div>
-      <div>
+      {/* <div>
         <div className="m-4 credit-card w-full lg:w-3/4 sm:w-auto shadow-lg mx-auto rounded-xl bg-white">
           <div className="mt-4 p-4">
             <h1 className="text-xl font-semibold text-gray-700 text-center">
@@ -216,7 +257,7 @@ export default function App() {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
